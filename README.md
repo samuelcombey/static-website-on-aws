@@ -41,9 +41,6 @@ This project deploys a static HTML web application on AWS, leveraging various re
    - Updates the system, installs necessary packages, and configures the HTTP server.
 
 This architecture ensures a robust, secure, and scalable environment for hosting a static website on AWS.
-### GitHub Integration
-
-GitHub is utilized to store the web files, allowing for efficient version control and collaborative development.
 ---
 ## Deployment Script
 
