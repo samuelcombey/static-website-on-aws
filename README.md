@@ -8,34 +8,39 @@ This project deploys a static HTML web application on AWS, leveraging various re
 ---
 ## Architecture
 
-### VPC Configuration
+1. **VPC Configuration:**
+   - VPC with public and private subnets in two availability zones.
+   - Internet Gateway for communication between instances in the VPC and the Internet.
 
-The project sets up a VPC with public and private subnets in two availability zones for high availability and fault tolerance. An Internet Gateway facilitates communication between instances in the VPC and the Internet.
+2. **Security Groups:**
+   - Firewall configurations to control inbound and outbound traffic.
 
-### Security Groups
+3. **Availability Zones:**
+   - Two availability zones for high availability and fault tolerance.
+   - Public subnets for resources like Nat Gateway, Bastion Host, and Application Load Balancer.
 
-Security groups act as firewalls, controlling inbound and outbound traffic. Proper configurations are in place to ensure the security of resources.
+4. **EC2 Instances:**
+   - Hosts the static website.
+   - Distributed across availability zones using an Auto Scaling Group.
+   - Utilizes EC2 Instance Connect Endpoint for simplified resource connection.
 
-### Availability Zones
+5. **Nat Gateway:**
+   - Allows instances in private subnets to access the Internet.
 
-To enhance availability and fault tolerance, the deployment spans two availability zones. Key resources like Nat Gateway, Bastion Host, and Application Load Balancer use public subnets.
+6. **Auto Scaling Group:**
+   - Dynamically creates EC2 instances for high availability, scalability, fault tolerance, and elasticity.
 
-### EC2 Instances
+7. **Route 53:**
+   - Used to register the domain name and create a record set for DNS resolution.
 
-EC2 instances host the static website and are distributed across availability zones using an Auto Scaling Group. The EC2 Instance Connect Endpoint simplifies resource connection.
+8. **GitHub Integration:**
+   - Web files stored in GitHub for version control and collaborative development.
 
-### Nat Gateway
+9. **Deployment Script (Bash):**
+   - Automates the installation of the web app on an EC2 instance.
+   - Updates the system, installs necessary packages, and configures the HTTP server.
 
-The Nat Gateway allows instances in private subnets to access the Internet, ensuring resources in private subnets can fulfill their functionalities.
-
-### Auto Scaling Group
-
-An Auto Scaling Group dynamically creates EC2 instances, making the website highly available, scalable, fault-tolerant, and elastic.
-
-### Route 53
-
-Route 53 is used to register the domain name and create a record set, providing DNS resolution for the website.
-
+This architecture ensures a robust, secure, and scalable environment for hosting a static website on AWS.
 ### GitHub Integration
 
 GitHub is utilized to store the web files, allowing for efficient version control and collaborative development.
