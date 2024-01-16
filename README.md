@@ -5,9 +5,9 @@
 ## Overview
 
 This project deploys a static HTML web application on AWS, leveraging various resources for high availability, fault tolerance, and scalability. The deployment utilizes Amazon EC2 instances, a Virtual Private Cloud (VPC) with public and private subnets across two availability zones, security groups, an Internet Gateway, and other AWS services.
----
-## Architecture
 
+## Architecture
+---
 1. **VPC Configuration:**
    - VPC with public and private subnets in two availability zones.
    - Internet Gateway for communication between instances in the VPC and the Internet.
@@ -41,9 +41,9 @@ This project deploys a static HTML web application on AWS, leveraging various re
    - Updates the system, installs necessary packages, and configures the HTTP server.
 
 This architecture ensures a robust, secure, and scalable environment for hosting a static website on AWS.
----
-## Deployment Script
 
+## Deployment Script
+---
 The deployment script automates the installation of the web app on an EC2 instance. Key steps include:
 
 1. Updating the system and installing necessary packages.
@@ -68,7 +68,5 @@ systemctl start httpd
 ```
 
 ## Conclusion
-
-This project successfully deploys a static website on AWS, utilizing various services and resources to achieve a robust and scalable architecture.
-
 ---
+This project successfully deploys a static website on AWS, utilizing various services and resources to achieve a robust and scalable architecture.
