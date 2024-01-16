@@ -1,5 +1,4 @@
 ![image](image.png)
----
 # AWS Static Website Deployment Project
 
 ## Overview
